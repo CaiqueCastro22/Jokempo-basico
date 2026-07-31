@@ -8,6 +8,7 @@ const pontuacaoAlexa = document.querySelector(".pontuacao-alexa");
 function jogar(escolhabotao) {
   const escolhas = ["pedra", "papel", "tesoura"];
   const escolhaAlexa = escolhas[Math.floor(Math.random() * escolhas.length)];
+  // Quando o usuário escolhe pedra
   if (escolhabotao.classList.contains("pedra")) {
     if (escolhaAlexa === "pedra") {
       resultado.textContent = "Empate!";
@@ -19,7 +20,7 @@ function jogar(escolhabotao) {
       pontuacaoUsuario.textContent = parseInt(pontuacaoUsuario.textContent) + 1;
     }
   }
-
+  // Quando o usuário escolhe papel
   if (escolhabotao.classList.contains("papel")) {
     if (escolhaAlexa === "pedra") {
       resultado.textContent = "Você ganhou!";
@@ -31,6 +32,7 @@ function jogar(escolhabotao) {
       pontuacaoAlexa.textContent = parseInt(pontuacaoAlexa.textContent) + 1;
     }
   }
+  // Quando o usuário escolhe tesoura
   if (escolhabotao.classList.contains("tesoura")) {
     if (escolhaAlexa === "pedra") {
       resultado.textContent = "Você perdeu!";
